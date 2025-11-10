@@ -1,43 +1,105 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
-      body {
-        margin: 0;
-      }
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Personal Homepage - New Programmer</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #6ee7b7;
+            --muted: #9aa4b2;
+            --glass: rgba(255,255,255,0.03);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html,body { height:100%; margin:0; background:linear-gradient(180deg,#071026 0%, #0a1320 100%); color:#e6eef6; }
+        .wrap { max-width:900px; margin:48px auto; padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; box-shadow: 0 6px 30px rgba(2,6,23,0.6); }
+        header { display:flex; gap:18px; align-items:center; }
+        .avatar {
+            width:96px; height:96px; border-radius:14px; display:grid; place-items:center;
+            background:linear-gradient(135deg,#081524,#11324a); border:1px solid rgba(255,255,255,0.04);
+            flex:0 0 96px;
+            font-weight:700; color:var(--accent);
+            font-size:28px;
+        }
+        h1 { margin:0 0 6px 0; font-size:22px; letter-spacing: -0.4px; }
+        p.lead { margin:0; color:var(--muted); }
+        .meta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+        .chip { background:var(--glass); color:var(--muted); padding:8px 12px; border-radius:999px; font-size:13px; border:1px solid rgba(255,255,255,0.02); }
+        section { margin-top:28px; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+        .card { background:var(--card); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); }
+        h2 { margin:0 0 8px 0; font-size:16px; }
+        ul { margin:0; padding-left:18px; color:var(--muted); }
+        a.button {
+            display:inline-block; margin-top:12px; background:linear-gradient(90deg,var(--accent),#49c2ff); color:#062026; text-decoration:none;
+            padding:10px 14px; border-radius:8px; font-weight:700;
+        }
+        footer { margin-top:28px; color:var(--muted); font-size:13px; text-align:center; }
+        @media (max-width:520px){ .wrap{ margin:18px; padding:18px } .avatar{width:76px;height:76px} }
     </style>
-  </head>
-  <body>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 40px;
-      ">
-      <img src='https://img.alicdn.com/imgextra/i3/2210898473009/O1CN01TTAgWE1Y6AoAKpJXV_!!2210898473009.jpg' alt="kwc" width="80px" height="80px">
-    </div>
-    <div style="
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 15px;
-      line-height: 1.7;
-      color: purple;
-    ">
-      <p>你好，世界，我是Rio</p>
-      <p>一个身在日本的编程小白</p>
-      <p>正在学习康文昌的编程教学课</p>
-      <p>请大家多多指教！</p>
-    </div>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 40px;
-      font-size: 12px;
-      ">
-      <p>我的资料</p>
-      <a href="https://space.bilibili.com/324633?spm_id_from=333.1007.0.0">哔哩哔哩主页</a>
-    </div>
-  </body>
+</head>
+<body>
+    <main class="wrap" role="main">
+        <header>
+            <div class="avatar" aria-hidden="true">&lt;/&gt;</div>
+            <div>
+                <h1>Hi — I'm [Your Name]</h1>
+                <p class="lead">A brand new programmer building web projects and learning every day. I enjoy turning ideas into simple, working apps.</p>
+                <div class="meta" aria-hidden="true">
+                    <span class="chip">Learning: HTML • CSS • JavaScript</span>
+                    <span class="chip">Tools: Git • VS Code</span>
+                    <span class="chip">Focus: Front-end basics</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="grid">
+                <div class="card">
+                    <h2>About</h2>
+                    <p style="color:var(--muted); margin:0;">
+                        I'm just starting out in programming. I practice by building small websites, experimenting with styles and JavaScript, and following tutorials to learn best practices.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>Simple portfolio site — learning layout and responsive design</li>
+                        <li>To-do list app — practicing DOM and localStorage</li>
+                        <li>More projects coming soon!</li>
+                    </ul>
+                    <a class="button" href="https://github.com/" target="_blank" rel="noopener">View GitHub</a>
+                </div>
+
+                <div class="card">
+                    <h2>Skills I'm Building</h2>
+                    <ul>
+                        <li>HTML & semantic structure</li>
+                        <li>Responsive CSS & Flexbox/Grid</li>
+                        <li>JavaScript fundamentals</li>
+                        <li>Version control with Git</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Contact</h2>
+                    <p style="color:var(--muted); margin:0;">Want to connect or give feedback? Replace the contact link below with your email or social profile.</p>
+                    <a style="display:inline-block; margin-top:10px; color:var(--accent); text-decoration:none;" href="mailto:you@example.com">you@example.com</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>&copy; <span id="year"></span> [Your Name]. Built while learning to code.</div>
+        </footer>
+    </main>
+
+    <script>
+        // small enhancement: update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
